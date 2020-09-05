@@ -336,6 +336,7 @@ module ColorLS
                   when @files.key?(key) then :recognized_file
                   else                       :unrecognized_file
                   end
+      color_key = key if color_key == :recognized_file and @colors.key?(key)
       @colors[color_key]
     end
 
