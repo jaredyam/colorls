@@ -29,7 +29,17 @@ A Ruby script that colorizes the `ls` output with color and icons.
 git clone https://github.com/jaredyam/colorls.git
 cd colorls
 
-gem build
+# install ruby >= 2.5.0
+sudo add-apt-repository ppa:brightbox/ruby-ng
+sudo apt-get update
+sudo apt-get install ruby2.6 ruby2.6-dev
+
+# install bundler
+gem install bundler
+bundle install
+
+# install colorls
+gem build colorls
 gem install --local *.gem
 ```
 
