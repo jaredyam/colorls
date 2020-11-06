@@ -72,7 +72,11 @@ alias ls="colorls --light --sort-dirs --report --dark"
 alias lc='colorls -lA --sd'
 
 function tree() {
-  colorls --tree="${1:-1}"
+  if [ "$1" -eq -1 ]; then
+    colorls --tree
+  else
+    colorls --tree="${1:-1}"
+  fi
 }
 
 function cd() {
