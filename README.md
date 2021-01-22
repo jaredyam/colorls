@@ -61,11 +61,12 @@ subl dark_colors.yaml
 py:        gold
 md:        pink
 pdf:       indianred
+...
 
 ```
 ## Recommended aliases
 
-You could copy the following aliases and functions into your default shell configure file (such as `.zshrc`). Don't forget to `source` it for using these new commands.
+You could copy-paste the following aliases and functions into your default shell configure file (such as `.zshrc`) and then `source` it before using these new commands.
 
 ```bash
 alias ls="colorls --light --sort-dirs --report --dark"
@@ -80,7 +81,7 @@ function tree() {
 }
 
 function cd() {
-  builtin cd "$1"
+  command cd "$1"
   tree
 }
 ```
